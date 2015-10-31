@@ -49,12 +49,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SalaMapping.cs" />
+    <Compile Include="DataContex.cs" />
+    <Compile Include="MAP\ItemMapping.cs" />
+    <Compile Include="MAP\RecursoMapping.cs" />
+    <Compile Include="MAP\SalaMapping.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SysSala.DTO\SysSala.DTO.csproj">
+      <Project>{6f49b565-0e25-46c3-820f-528676af7053}</Project>
+      <Name>SysSala.DTO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
