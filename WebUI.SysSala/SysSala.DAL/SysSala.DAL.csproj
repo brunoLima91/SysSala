@@ -53,6 +53,7 @@
     <Compile Include="MAP\ItemMapping.cs" />
     <Compile Include="MAP\RecursoMapping.cs" />
     <Compile Include="MAP\SalaMapping.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -8,6 +8,10 @@ namespace SysSala.DTO
 {
     public class Sala
     {
+        public Sala()
+        {
+            Recursos = new List<Recurso>();
+        }
         public int SalaId { get; set; }
         public virtual string Descricao { get; set; }
         public virtual bool Disponivel { get; set; }        

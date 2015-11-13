@@ -7,6 +7,7 @@ using System.Data;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using SysSala.DTO;
+using SysSala.DAL.MAP;
 
 namespace SysSala.DAL
 {
@@ -19,7 +20,7 @@ namespace SysSala.DAL
             Configuration.ProxyCreationEnabled = false;
         }
 
-        public DbSet<Sala> Sala { get; set; }
+        public DbSet<Sala> Salas { get; set; }
         public DbSet<Item> Itens { get; set; }
         public DbSet<Recurso> Recursos { get; set; }
 
@@ -35,6 +36,10 @@ namespace SysSala.DAL
                    .Configure(p => p.HasColumnType("varchar"));
             modelBuilder.Properties<string>()
                   .Configure(p => p.HasMaxLength(100));
+
+            modelBuilder.Configurations.Add(new ItemMapping());
+            modelBuilder.Configurations.Add(new RecursoMapping());
+            modelBuilder.Configurations.Add(new SalaMapping());
         }
     }
 }

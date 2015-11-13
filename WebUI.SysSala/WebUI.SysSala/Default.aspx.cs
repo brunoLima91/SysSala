@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SysSala.BLL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,8 @@ namespace WebUI.SysSala
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            SalaBLL.Carregar();
+            var lSalas = SalaBLL.Listar();
         }
     }
 }

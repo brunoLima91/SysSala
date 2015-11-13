@@ -8,5 +8,8 @@ namespace SysSala.DTO
 {
     public enum ETipoSala
     {
+        Auditorio,
+        LaboratorioInformatica,
+        Aula,
     }
 }

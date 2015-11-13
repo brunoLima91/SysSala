@@ -389,6 +389,16 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SysSala.BLL\SysSala.BLL.csproj">
+      <Project>{f5b04620-c729-4400-8749-35a4465b4ce6}</Project>
+      <Name>SysSala.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SysSala.DTO\SysSala.DTO.csproj">
+      <Project>{6f49b565-0e25-46c3-820f-528676af7053}</Project>
+      <Name>SysSala.DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
