@@ -25,9 +25,7 @@ namespace SysSala.DAL
             Property(x => x.TipoSala)
                 .IsRequired();
 
-
-                
-                
+            HasMany(x => x.Recursos);
         }
     }
 }
