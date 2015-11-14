@@ -8,8 +8,10 @@ namespace SysSala.DTO
 {
     public class HorarioAula
     {
-        public EDiaSemana DiaSemana { get; set; }
-        public DateTime HoraInicio { get; set; }
-        public DateTime HoraFim { get; set; }
+
+        public int HorarioAulaID { get; set; }
+        public virtual EDiaSemana DiaSemana { get; set; }
+        public virtual DateTime HoraInicio { get; set; }
+        public virtual DateTime HoraFim { get; set; }
     }
 }

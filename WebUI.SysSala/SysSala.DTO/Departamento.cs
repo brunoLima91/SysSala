@@ -13,7 +13,8 @@ namespace SysSala.DTO
             Cursos = new List<Curso>();
             Professores = new List<Professor>();
         }
-        public IList<Curso> Cursos { get; protected set; }
-        public IList<Professor> Professores { get; protected set; }
+        public virtual IList<Curso> Cursos { get; protected set; }
+        public virtual IList<Professor> Professores { get; protected set; }
+        public int DepartamentoID { get; set; }
     }
 }

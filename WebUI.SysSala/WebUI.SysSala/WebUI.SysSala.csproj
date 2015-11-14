@@ -43,6 +43,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=4.1.40412.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\..\UFBA\Ajax\AjaxControlToolkit.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
@@ -180,6 +184,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Account\Web.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Icons\Calend.png" />
+    <Content Include="Icons\Calendar.ico" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -213,6 +219,9 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
+    <Content Include="SysSala\Alunos\HomeAlunos.aspx" />
+    <Content Include="SysSala\Professores\MinhasReservas.aspx" />
+    <Content Include="SysSala\Professores\SolicitarReserva.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -220,6 +229,7 @@
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Site.Mobile.Master" />
+    <Content Include="SysSala\Professores\ProfessorMaster.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -378,6 +388,34 @@
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="SysSala\Alunos\HomeAlunos.aspx.cs">
+      <DependentUpon>HomeAlunos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SysSala\Alunos\HomeAlunos.aspx.designer.cs">
+      <DependentUpon>HomeAlunos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SysSala\Professores\MinhasReservas.aspx.cs">
+      <DependentUpon>MinhasReservas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SysSala\Professores\MinhasReservas.aspx.designer.cs">
+      <DependentUpon>MinhasReservas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SysSala\Professores\ProfessorMaster.Master.cs">
+      <DependentUpon>ProfessorMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SysSala\Professores\ProfessorMaster.Master.designer.cs">
+      <DependentUpon>ProfessorMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SysSala\Professores\SolicitarReserva.aspx.cs">
+      <DependentUpon>SolicitarReserva.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SysSala\Professores\SolicitarReserva.aspx.designer.cs">
+      <DependentUpon>SolicitarReserva.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -388,6 +426,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="SysSala\Administradores\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SysSala.BLL\SysSala.BLL.csproj">

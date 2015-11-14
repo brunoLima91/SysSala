@@ -8,9 +8,9 @@ namespace SysSala.DTO
 {
    public class Recurso
     {
-        public int RecursoId { get; set; }
-        public virtual Item Item { get; set; }
-        public virtual int Quantidade { get; set; }
-        public virtual Sala Sala { get; set; }
+        public int Id { get; set; }
+        public  Item Item { get; set; }
+        public  int Quantidade { get; set; }
+        public  Sala Sala { get; set; }
     }
 }

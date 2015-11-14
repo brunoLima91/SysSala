@@ -8,9 +8,9 @@ namespace SysSala.DTO
 {
    public class Turma
     {
-        public string Codigo { get; set; }
-        public Professor Professor { get; set; }
-        public Disciplina Disciplina { get; set; }
+        public virtual string Codigo { get; set; }
+        public virtual Professor Professor { get; set; }
+        public virtual Disciplina Disciplina { get; set; }
 
     }
 }

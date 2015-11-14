@@ -12,10 +12,17 @@ namespace SysSala.DTO
         {
             Recursos = new List<Recurso>();
         }
-        public int SalaId { get; set; }
-        public virtual string Descricao { get; set; }
-        public virtual bool Disponivel { get; set; }        
-        public virtual IList<Recurso> Recursos { get; protected set; }
-        public virtual ETipoSala TipoSala { get; set; }
+        public int Id { get; set; }
+        public  string Descricao { get; set; }
+        public  bool Disponivel { get; set; }        
+        public  IList<Recurso> Recursos { get; protected set; }
+        public  ETipoSala TipoSala { get; set; }
+        public  ELolizacao Localizacao{ get; set; }
+        public  Pavilhao Predio { get; set; }
+
+        public string LocalizacaoDesc
+        {
+            get { return this.Predio.Descricao + " - " + this.Localizacao.ToString(); }
+        }
     }
 }
