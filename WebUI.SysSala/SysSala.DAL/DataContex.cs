@@ -17,8 +17,8 @@ namespace SysSala.DAL
             : base("DataContext")
         {
            // Database.SetInitializer(new DropCreateDatabaseAlways<DataContex>());
-            //Configuration.LazyLoadingEnabled = false;
-            //Configuration.ProxyCreationEnabled = false;
+            this.Configuration.LazyLoadingEnabled = false;
+            this.Configuration.ProxyCreationEnabled = false;
         }
 
         //public DbSet<Sala> Salas { get; set; }
@@ -58,7 +58,7 @@ namespace SysSala.DAL
 
             modelBuilder.Entity<Pessoa>().ToTable("tbPessoa", "glo");
             modelBuilder.Entity<Professor>().ToTable("tbProfessor", "glo");
-            modelBuilder.RegisterEntityType(typeof(Sala));
+           // modelBuilder.RegisterEntityType(typeof(Sala));
             //modelBuilder.RegisterEntityType(typeof(Pessoa));
             base.OnModelCreating(modelBuilder);
         }

@@ -13,5 +13,10 @@ namespace SysSala.DTO
         public EDiaSemana DiaSemana { get; set; }
         public DateTime HoraInicio { get; set; }
         public DateTime HoraFim { get; set; }
+
+        public string Descricao
+        {
+            get { return this.DiaSemana.ToString() +" - " + this.HoraInicio.ToShortTimeString()+ " - " + this.HoraFim.ToShortTimeString(); }
+        }
     }
 }

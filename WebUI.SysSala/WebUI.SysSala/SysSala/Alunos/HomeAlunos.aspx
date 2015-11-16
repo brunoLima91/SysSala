@@ -22,19 +22,19 @@
                 <div style="margin: auto;">
                     Professor
                 <br />
-                    <asp:DropDownList ID="DropDownList1" Width="280px" CssClass="form-control" runat="server"></asp:DropDownList>
+                    <asp:DropDownList ID="ddlProfessor" Width="280px" CssClass="form-control" runat="server" DataValueField="Id" DataTextField="Nome"></asp:DropDownList>
                 </div>
 
                 <div style="margin: auto;">
                     Turma
                 <br />
-                    <asp:DropDownList ID="DropDownList4" Width="280px" CssClass="form-control" runat="server"></asp:DropDownList>
+                    <asp:DropDownList ID="ddlTurma" Width="280px" CssClass="form-control" runat="server" DataValueField="Id" DataTextField="Descricao"></asp:DropDownList>
                 </div>
 
                 <div style="margin: auto;">
                     Disciplina
                 <br />
-                    <asp:DropDownList ID="DropDownList5" Width="280px" CssClass="form-control" runat="server"></asp:DropDownList>
+                    <asp:DropDownList ID="ddlDisciplina" Width="280px" CssClass="form-control" runat="server" DataValueField="Id" DataTextField="Descricao"></asp:DropDownList>
                 </div>
             </div>
         </div>
@@ -42,15 +42,32 @@
     <br />
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
-            <asp:Button runat="server" Text="Pesquisar" CssClass="btn btn-default" />
+            <asp:Button runat="server" Text="Pesquisar" CssClass="btn btn-default" OnClick="Unnamed1_Click" />
         </div>
     </div>
     <hr />
+    <div >
+        <fieldset class="groupbox">
+            <legend class="legenda">Salas</legend>
+            <asp:GridView ID="gdvReservas" runat="server" AutoGenerateColumns="False" CssClass="gridviewListagem"
+                CellPadding="4" ForeColor="#333333" GridLines="None" DataKeyNames="ID" Width="100%">
+                <RowStyle BackColor="#FFFBD6" ForeColor="#333333" />
+                <Columns>
+                    <asp:BoundField DataField="Sala.Text" HeaderText="Sala" />
+                    <asp:BoundField DataField="HorarioAula.Descricao" HeaderText="Horário Aula" />
+                    <asp:BoundField DataField="Turma.Descricao" HeaderText="Turma" />
+                    <asp:BoundField DataField="Turma.Professor.Nome" HeaderText="Professor" />
+                    <asp:BoundField DataField="Turma.Disciplina.Descricao" HeaderText="Disiciplina" />
+                </Columns>
+                <FooterStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="#FFCC66" ForeColor="#333333" HorizontalAlign="Center" />
+                <SelectedRowStyle BackColor="#FFCC66" Font-Bold="True" ForeColor="Navy" />
+                <HeaderStyle BackColor="#4b6c9e" Font-Bold="True" ForeColor="White" />
+                <AlternatingRowStyle BackColor="White" />
+            </asp:GridView>
+        </fieldset>
+    </div>
 
-    <fieldset class="groupbox">
-        <legend class="legenda">Salas</legend>
-        <asp:GridView ID="GridView1" runat="server"></asp:GridView>
-    </fieldset>
 
 </asp:Content>
 

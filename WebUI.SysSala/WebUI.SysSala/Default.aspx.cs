@@ -13,7 +13,7 @@ namespace WebUI.SysSala
         protected void Page_Load(object sender, EventArgs e)
         {
             //SysSalaSystem.CargaInicial();
-            SysSalaSystem.Horarios();
+            //SysSalaSystem.Horarios();
             //var lSalas = SalaBLL.Listar();
         }
     }
