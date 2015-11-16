@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="SalaBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SysSalaSystem.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SysSala.DAL\SysSala.DAL.csproj">

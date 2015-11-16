@@ -8,9 +8,9 @@ namespace SysSala.DTO
 {
     public class Pavilhao
     {
-        public int PavilhaoId { get; set; }
-        public virtual string Descricao { get; set; }
-        public virtual IList<Sala> Salas { get; set; }
+        public int Id { get; set; }
+        public string Descricao { get; set; }
+        public IList<Sala> Salas { get; set; }
 
         public Pavilhao()
         {

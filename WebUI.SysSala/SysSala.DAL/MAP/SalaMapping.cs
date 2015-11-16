@@ -39,7 +39,9 @@ namespace SysSala.DAL
                 .HasColumnName("sal_str_localizacao")
                 .IsRequired();
 
-            HasRequired(x => x.Predio);
+            HasRequired(x => x.Predio)
+                .WithMany()
+                .Map(x=> x.MapKey("pre_int_id"));
 
         }
     }

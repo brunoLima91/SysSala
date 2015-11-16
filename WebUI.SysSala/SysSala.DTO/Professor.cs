@@ -11,5 +11,10 @@ namespace SysSala.DTO
         public string Matricula { get; set; }
         public IList<Turma> Turmas { get; set; }
 
+        public Professor()
+        {
+            Turmas = new List<Turma>();
+        }
+
     }
 }

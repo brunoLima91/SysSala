@@ -62,7 +62,7 @@ namespace SysSala.DAL.Migrations
             lSala.Recursos.Add(lRecurso2);
             lSala.TipoSala = ETipoSala.Aula;
 
-            context.Salas.Add(lSala);
+           // context.Salas.Add(lSala);
             
         }
     }
