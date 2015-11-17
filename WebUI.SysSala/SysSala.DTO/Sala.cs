@@ -28,7 +28,7 @@ namespace SysSala.DTO
 
         public string Text
         {
-            get { return this.Descricao + "-" + LocalizacaoDesc; }
+            get { return this.Descricao + " - " + LocalizacaoDesc; }
         }
     }
 }

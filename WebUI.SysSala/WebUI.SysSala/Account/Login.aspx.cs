@@ -5,6 +5,8 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Owin;
 using WebUI.SysSala.Models;
+using SysSala.BLL;
+using SysSala.DTO;
 
 namespace WebUI.SysSala.Account
 {
@@ -25,37 +27,32 @@ namespace WebUI.SysSala.Account
 
         protected void LogIn(object sender, EventArgs e)
         {
-            if (IsValid)
+            try
             {
-                // Validate the user password
-                var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
-                var signinManager = Context.GetOwinContext().GetUserManager<ApplicationSignInManager>();
+                var usu = UsuarioBLL.VerificarCrendeciais(Email.Text, Password.Text);
 
-                // This doen't count login failures towards account lockout
-                // To enable password failures to trigger lockout, change to shouldLockout: true
-                var result = signinManager.PasswordSignIn(Email.Text, Password.Text, RememberMe.Checked, shouldLockout: false);
-
-                switch (result)
+                if (usu != null)
                 {
-                    case SignInStatus.Success:
-                        IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
-                        break;
-                    case SignInStatus.LockedOut:
-                        Response.Redirect("/Account/Lockout");
-                        break;
-                    case SignInStatus.RequiresVerification:
-                        Response.Redirect(String.Format("/Account/TwoFactorAuthenticationSignIn?ReturnUrl={0}&RememberMe={1}", 
-                                                        Request.QueryString["ReturnUrl"],
-                                                        RememberMe.Checked),
-                                          true);
-                        break;
-                    case SignInStatus.Failure:
-                    default:
-                        FailureText.Text = "Invalid login attempt";
-                        ErrorMessage.Visible = true;
-                        break;
+                    if (usu.TipoUsuario == ETipoUsuario.Professor)
+                        Response.Redirect("~/SysSala/Professores/MinhasReservas.aspx,false");
+                    else
+                        Response.Redirect("~/SysSala/Professores/MinhasReservas.aspx", false);
+
+                    Session["UsuarioId"] = usu.Id;
                 }
+                else
+                {
+                    FailureText.Text = "Usuário não cadastrado.";
+                    ErrorMessage.Visible = true;
+                }
+
             }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
         }
     }
 }

@@ -15,6 +15,11 @@ namespace SysSala.DTO
         public  DateTime PeriodoFim { get; set; }
         public  HorarioAula HorarioAula { get; set; }
 
+        public string Periodo
+        {
+            get { return PeriodoInicial.ToShortDateString() + "-" + PeriodoFim.ToShortDateString(); }
+        }
+
 
     }
 }

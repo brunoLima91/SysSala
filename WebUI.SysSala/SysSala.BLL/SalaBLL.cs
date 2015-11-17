@@ -12,9 +12,7 @@ namespace SysSala.BLL
     {
         public static IList<Sala> Listar()
         {
-            //DataContex db = new DataContex();
-
-            using (var db = new DataContex())
+          using (var db = new DataContex())
             {
                 return db.Set<Sala>()
         .Include("Recursos")
