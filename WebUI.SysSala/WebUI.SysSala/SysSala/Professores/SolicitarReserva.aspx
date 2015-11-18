@@ -3,6 +3,11 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <section id="contextAluno" class="contex">
         <h1>Solicitar Reserva</h1>
+        <asp:PlaceHolder runat="server" ID="ErrorMessage" Visible="false">
+            <p class="text-danger">
+                <asp:Literal runat="server" ID="FailureText" />
+            </p>
+        </asp:PlaceHolder>
         <div class="row">
             <div class="col-md-8">
 
@@ -15,7 +20,7 @@
                 <div style="margin: auto;">
                     Data Final
                 <br />
-                    <asp:TextBox ID="TextBox2" CssClass="form-control" Width="22%" TextMode="Date" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtDataFinal" CssClass="form-control" Width="22%" TextMode="Date" runat="server"></asp:TextBox>
                 </div>
 
                 <div style="margin: auto;">
@@ -70,4 +75,9 @@
             </fieldset>
         </div>
     </asp:Panel>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <asp:Button runat="server" Text="Reservar" CssClass="btn btn-default" OnClick="btnSolicitar_Click" />
+        </div>
+    </div>
 </asp:Content>

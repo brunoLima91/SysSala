@@ -7,7 +7,7 @@
         <div class="row">
             <div class="col-md-8">
 
-                <div style="margin: auto;">
+                <%--<div style="margin: auto;">
                     Data Inicial
                 <br />
                     <asp:TextBox ID="txtDataInicio" Width="22%" CssClass="form-control" TextMode="Date" runat="server"></asp:TextBox>
@@ -17,7 +17,7 @@
                     Data Final
                 <br />
                     <asp:TextBox ID="TextBox2" CssClass="form-control" Width="22%" TextMode="Date" runat="server"></asp:TextBox>
-                </div>
+                </div>--%>
 
                 <div style="margin: auto;">
                     Professor

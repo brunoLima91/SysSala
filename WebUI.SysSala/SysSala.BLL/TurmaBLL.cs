@@ -18,5 +18,14 @@ namespace SysSala.BLL
                 .ToList();
             }
         }
+
+        public static Turma BuscarId( int Id)
+        {
+            using (var db = new DataContex())
+            {
+                return db.Set<Turma>()
+                .FirstOrDefault(x => x.Id == Id);
+            }
+        }
     }
 }

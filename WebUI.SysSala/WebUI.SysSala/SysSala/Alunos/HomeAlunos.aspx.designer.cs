@@ -13,24 +13,6 @@ namespace WebUI.SysSala.SysSala.Alunos {
     public partial class HomeAlunos {
         
         /// <summary>
-        /// txtDataInicio control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDataInicio;
-        
-        /// <summary>
-        /// TextBox2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
-        
-        /// <summary>
         /// ddlProfessor control.
         /// </summary>
         /// <remarks>

@@ -12,10 +12,11 @@ namespace SysSala.BLL
     {
         public static IList<Sala> Listar()
         {
-          using (var db = new DataContex())
+            using (var db = new DataContex())
             {
                 return db.Set<Sala>()
         .Include("Recursos")
+        .Include("Predio")
         .ToList();
             }
 
@@ -91,7 +92,16 @@ namespace SysSala.BLL
                     }
                     throw raise;
                 }
-                
+
+            }
+        }
+
+        public static Sala BuscarPorId(int Id)
+        {
+            using (var db = new DataContex())
+            {
+                return db.Set<Sala>().Where(x => x.Id == Id)
+                    .FirstOrDefault();
             }
         }
     }

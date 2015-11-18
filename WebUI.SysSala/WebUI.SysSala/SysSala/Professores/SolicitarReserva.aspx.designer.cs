@@ -13,6 +13,24 @@ namespace WebUI.SysSala.SysSala.Professores {
     public partial class SolicitarReserva {
         
         /// <summary>
+        /// ErrorMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder ErrorMessage;
+        
+        /// <summary>
+        /// FailureText control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal FailureText;
+        
+        /// <summary>
         /// txtDataInicio control.
         /// </summary>
         /// <remarks>
@@ -22,13 +40,13 @@ namespace WebUI.SysSala.SysSala.Professores {
         protected global::System.Web.UI.WebControls.TextBox txtDataInicio;
         
         /// <summary>
-        /// TextBox2 control.
+        /// txtDataFinal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox txtDataFinal;
         
         /// <summary>
         /// ddlTurma control.
