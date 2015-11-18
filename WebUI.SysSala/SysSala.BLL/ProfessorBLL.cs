@@ -15,6 +15,8 @@ namespace SysSala.BLL
             using (var db = new DataContex())
             {
                 return db.Set<Professor>()
+                    .Include("Turmas")
+                    .Include("Turmas.Disciplina")
                 .ToList();
             }
         }

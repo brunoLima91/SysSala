@@ -14,5 +14,10 @@ namespace SysSala.DTO
         public virtual Professor Professor { get; set; }
         public virtual Disciplina Disciplina { get; set; }
 
+        public string Text
+        {
+            get { return this.Codigo + " -" + this.Descricao + " - " + this.Disciplina.Descricao; }
+        }
+
     }
 }

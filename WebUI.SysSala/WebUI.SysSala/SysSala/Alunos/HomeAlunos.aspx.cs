@@ -69,6 +69,7 @@ namespace WebUI.SysSala.SysSala.Alunos
 
         protected void Unnamed1_Click(object sender, EventArgs e)
         {
+            pnlReservas.Visible = true;
             PopularGrid();
         }
     }

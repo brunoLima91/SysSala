@@ -50,10 +50,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DisciplinaBLL.cs" />
+    <Compile Include="HorarioAulaBLL.cs" />
     <Compile Include="ProfessorBLL.cs" />
     <Compile Include="ReservaSalaBLL.cs" />
     <Compile Include="SalaBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SolicitacaoReservaBLL.cs" />
     <Compile Include="SysSalaSystem.cs" />
     <Compile Include="TurmaBLL.cs" />
     <Compile Include="UsuarioBLL.cs" />

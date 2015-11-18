@@ -18,5 +18,9 @@ namespace SysSala.DTO
         {
             get { return this.DiaSemana.ToString() +" - " + this.HoraInicio.ToShortTimeString()+ " - " + this.HoraFim.ToShortTimeString(); }
         }
+
+        public string Text        {
+            get { return  this.HoraInicio.ToShortTimeString() + " - " + this.HoraFim.ToShortTimeString(); }
+        }
     }
 }

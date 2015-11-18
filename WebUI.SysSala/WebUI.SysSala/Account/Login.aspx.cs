@@ -34,7 +34,7 @@ namespace WebUI.SysSala.Account
                 if (usu != null)
                 {
                     if (usu.TipoUsuario == ETipoUsuario.Professor)
-                        Response.Redirect("~/SysSala/Professores/MinhasReservas.aspx,false");
+                        Response.Redirect("~/SysSala/Professores/MinhasReservas.aspx",false);
                     else
                         Response.Redirect("~/SysSala/Professores/MinhasReservas.aspx", false);
 
