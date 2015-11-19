@@ -8,6 +8,11 @@
                 <asp:Literal runat="server" ID="FailureText" />
             </p>
         </asp:PlaceHolder>
+        <asp:PlaceHolder runat="server" ID="SucessMessage" Visible="false">
+            <p class="text-sucess">
+                <asp:Literal runat="server" ID="SucessText" />
+            </p>
+        </asp:PlaceHolder>
         <div class="row">
             <div class="col-md-8">
 
@@ -74,10 +79,11 @@
                 </asp:GridView>
             </fieldset>
         </div>
-    </asp:Panel>
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <asp:Button runat="server" Text="Reservar" CssClass="btn btn-default" OnClick="btnSolicitar_Click" />
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <asp:Button runat="server" Text="Reservar" CssClass="btn btn-default" OnClick="btnSolicitar_Click" />
+            </div>
         </div>
-    </div>
+    </asp:Panel>
+
 </asp:Content>

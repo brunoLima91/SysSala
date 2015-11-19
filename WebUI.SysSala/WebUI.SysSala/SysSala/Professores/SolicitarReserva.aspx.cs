@@ -137,20 +137,34 @@ namespace WebUI.SysSala.SysSala.Professores
                 ErrorMessage.Visible = true;
                 FailureText.Text = "Por gentileza selecione uma Sala";
             }
-
-            string lretorno = "";
-            var usu = UsuarioBLL.BuscarPorId(Convert.ToInt32(Session["UsuarioId"]));
-            if (!SolicitacaoReservaBLL.realizarSolicitacao(Convert.ToInt32(ddlTurma.SelectedValue),
-                usu.Pessoa.Id, Convert.ToInt32(ddlHorarioAula.SelectedValue),Convert.ToDateTime(txtDataInicio.Text),
-                Convert.ToDateTime(txtDataFinal.Text), out lretorno,lSalas.ToList(), usu.Id))
-            {
-                ErrorMessage.Visible = true;
-                FailureText.Text = lretorno;
-            }
             else
             {
-                //Reserva Realizada
+                string lretorno = "";
+                var usu = UsuarioBLL.BuscarPorId(Convert.ToInt32(Session["UsuarioId"]));
+                if (!SolicitacaoReservaBLL.realizarSolicitacao(Convert.ToInt32(ddlTurma.SelectedValue),
+                    usu.Pessoa.Id, Convert.ToInt32(ddlHorarioAula.SelectedValue), Convert.ToDateTime(txtDataInicio.Text),
+                    Convert.ToDateTime(txtDataFinal.Text), out lretorno, lSalas.ToList(), usu.Id))
+                {
+                    ErrorMessage.Visible = true;
+                    FailureText.Text = lretorno;
+                }
+                else
+                {
+                    SucessMessage.Visible = true;
+                    SucessText.Text = lretorno;
+                    LimparCompenentes();
+                }
+
             }
+
+
+        }
+
+        private void LimparCompenentes()
+        {
+            ddlDia.SelectedIndex = ddlHorarioAula.SelectedIndex = ddlTurma.SelectedIndex = 0;
+            txtDataInicio.Text = txtDataFinal.Text = "";
+            pnlReservas.Visible = false;
         }
 
 

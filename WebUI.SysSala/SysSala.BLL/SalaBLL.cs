@@ -100,7 +100,9 @@ namespace SysSala.BLL
         {
             using (var db = new DataContex())
             {
-                return db.Set<Sala>().Where(x => x.Id == Id)
+                return db.Set<Sala>()
+                    .Include("Predio")
+                    .Where(x => x.Id == Id)                    
                     .FirstOrDefault();
             }
         }

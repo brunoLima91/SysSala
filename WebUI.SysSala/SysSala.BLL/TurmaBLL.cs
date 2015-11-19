@@ -24,6 +24,8 @@ namespace SysSala.BLL
             using (var db = new DataContex())
             {
                 return db.Set<Turma>()
+                    .Include("Disciplina")
+                    .Include("Professor")
                 .FirstOrDefault(x => x.Id == Id);
             }
         }

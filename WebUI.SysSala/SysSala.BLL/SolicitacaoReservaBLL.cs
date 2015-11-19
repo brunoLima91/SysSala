@@ -27,7 +27,6 @@ namespace SysSala.BLL
                 }
                 else
                 {
-
                     // Sala pode ser reservada
 
                     
@@ -35,9 +34,7 @@ namespace SysSala.BLL
                     reserved = true;
                     lMensagens = "Solicitação Realizada para a Sala " +item.Descricao +"";
                     break;
-
-                   
-
+                                       
                 }
 
 
