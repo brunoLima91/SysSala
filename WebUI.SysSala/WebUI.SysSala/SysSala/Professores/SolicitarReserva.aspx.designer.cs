@@ -110,5 +110,23 @@ namespace WebUI.SysSala.SysSala.Professores {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView gdvSalas;
+        
+        /// <summary>
+        /// pnlMinhasReservas control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlMinhasReservas;
+        
+        /// <summary>
+        /// gdvMinhasSolicitacoes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gdvMinhasSolicitacoes;
     }
 }

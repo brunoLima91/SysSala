@@ -219,6 +219,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
+    <Content Include="SysSala\Administradores\SolicitacoesReserva.aspx" />
     <Content Include="SysSala\Alunos\HomeAlunos.aspx" />
     <Content Include="SysSala\Professores\MinhasReservas.aspx" />
     <Content Include="SysSala\Professores\SolicitarReserva.aspx" />
@@ -230,6 +231,7 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Site.Mobile.Master" />
     <Content Include="SysSala\Professores\ProfessorMaster.Master" />
+    <Content Include="SysSala\Administradores\AdministradorMaster.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -388,6 +390,20 @@
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="SysSala\Administradores\AdministradorMaster.Master.cs">
+      <DependentUpon>AdministradorMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SysSala\Administradores\AdministradorMaster.Master.designer.cs">
+      <DependentUpon>AdministradorMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SysSala\Administradores\SolicitacoesReserva.aspx.cs">
+      <DependentUpon>SolicitacoesReserva.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SysSala\Administradores\SolicitacoesReserva.aspx.designer.cs">
+      <DependentUpon>SolicitacoesReserva.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SysSala\Alunos\HomeAlunos.aspx.cs">
       <DependentUpon>HomeAlunos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -426,7 +442,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="SysSala\Administradores\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SysSala.BLL\SysSala.BLL.csproj">

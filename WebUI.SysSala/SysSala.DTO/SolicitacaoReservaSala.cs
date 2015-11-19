@@ -17,5 +17,10 @@ namespace SysSala.DTO
         public Usuario Solicitante { get; set; }
         public Usuario Aprovador { get; set; }
         public EStatusSolicitacaoReserva StatusSolicitacao { get; set; }
+
+        public string Periodo
+        {
+            get { return PeriodoInicial.ToShortDateString() + "-" + PeriodoFim.ToShortDateString(); }
+        }
     }
 }

@@ -10,6 +10,22 @@ namespace SysSala.BLL
 {
     public class SolicitacaoReservaBLL
     {
+        public static IList<SolicitacaoReservaSala> Listar()
+        {
+            using (var db = new DataContex())
+            {
+                return db.Set<SolicitacaoReservaSala>()
+                    .Include("HorarioAula")
+                    .Include("Sala")
+                    .Include("Sala.Predio")
+                    .Include("Turma")
+                    .Include("Turma.Disciplina")
+                    .Include("Turma.Professor")
+                    .Include("Solicitante")
+                .ToList();
+            }
+        }
+
         public static bool realizarSolicitacao(int TurmaId, int ProfessorId, int HorarioId, DateTime dtInicio, DateTime dtFim, out string lMensagens, List<Sala> pSalas, int UsuarioId)
         {
             lMensagens = "";
@@ -21,11 +37,8 @@ namespace SysSala.BLL
             foreach (var item in pSalas)
             {
                 if (lReservas.Count(x => x.Sala.Id == item.Id
-                && x.HorarioAula.Id == HorarioId && x.PeriodoInicial >= dtInicio && x.PeriodoFim <= dtInicio) > 0)
-                {
-
-                }
-                else
+                && x.HorarioAula.Id == HorarioId && x.PeriodoInicial >= dtInicio && x.PeriodoFim <= dtInicio) == 0)
+                   
                 {
                     // Sala pode ser reservada
 

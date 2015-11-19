@@ -20,6 +20,7 @@ namespace WebUI.SysSala.SysSala.Professores
             if (!IsPostBack)
             {
                 CarregarCombos();
+                carregarGridMinhasReservas();
             }
 
         }
@@ -82,6 +83,8 @@ namespace WebUI.SysSala.SysSala.Professores
 
             gdvSalas.DataSource = SalaBLL.Listar().Where(x=> x.Disponivel);
             gdvSalas.DataBind();
+
+         
         }
 
         protected void btnSolicitar_Click(object sender, EventArgs e)
@@ -165,6 +168,13 @@ namespace WebUI.SysSala.SysSala.Professores
             ddlDia.SelectedIndex = ddlHorarioAula.SelectedIndex = ddlTurma.SelectedIndex = 0;
             txtDataInicio.Text = txtDataFinal.Text = "";
             pnlReservas.Visible = false;
+        }
+
+        private void carregarGridMinhasReservas()
+        {
+            gdvMinhasSolicitacoes.DataSource = SolicitacaoReservaBLL.Listar()
+            .Where(x => x.Solicitante.Id == Convert.ToInt32(Session["UsuarioId"]));
+            gdvMinhasSolicitacoes.DataBind();
         }
 
 

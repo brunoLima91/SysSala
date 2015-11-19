@@ -9,7 +9,7 @@
             </p>
         </asp:PlaceHolder>
         <asp:PlaceHolder runat="server" ID="SucessMessage" Visible="false">
-            <p class="text-sucess">
+            <p class="ok">
                 <asp:Literal runat="server" ID="SucessText" />
             </p>
         </asp:PlaceHolder>
@@ -55,7 +55,7 @@
     <asp:Panel ID="pnlReservas" runat="server" CssClass="panel-body" Visible="false">
         <div>
             <fieldset class="groupbox">
-                <legend class="legenda">Salas</legend>
+                <legend class="legenda">Selecione as salas de sua preferência</legend>
                 <asp:GridView ID="gdvSalas" runat="server" AutoGenerateColumns="False" CssClass="gridviewListagem"
                     CellPadding="4" ForeColor="#333333" GridLines="None" DataKeyNames="ID" Width="100%">
                     <RowStyle BackColor="#FFFBD6" ForeColor="#333333" />
@@ -83,6 +83,31 @@
             <div class="col-md-offset-2 col-md-10">
                 <asp:Button runat="server" Text="Reservar" CssClass="btn btn-default" OnClick="btnSolicitar_Click" />
             </div>
+        </div>
+    </asp:Panel>
+    <hr />
+    <asp:Panel ID="pnlMinhasReservas" runat="server" CssClass="panel-body" >
+        <div>
+            <fieldset class="groupbox">
+                <legend class="legenda">Minhas Solicitações</legend>
+                <asp:GridView ID="gdvMinhasSolicitacoes" runat="server" AutoGenerateColumns="False" CssClass="gridviewListagem"
+                    CellPadding="4" ForeColor="#333333" GridLines="None" DataKeyNames="ID" Width="100%">
+                    <RowStyle BackColor="#FFFBD6" ForeColor="#333333" />
+                    <Columns>
+                        <asp:BoundField DataField="Periodo" HeaderText="Período" />
+                        <asp:BoundField DataField="Sala.Text" HeaderText="Sala" />
+                        <asp:BoundField DataField="HorarioAula.Descricao" HeaderText="Horário Aula" />
+                        <asp:BoundField DataField="Turma.Descricao" HeaderText="Turma" />
+                        <asp:BoundField DataField="StatusSolicitacao" HeaderText="Status" />
+                        <asp:BoundField DataField="Turma.Disciplina.Descricao" HeaderText="Disiciplina" />
+                    </Columns>
+                    <FooterStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
+                    <PagerStyle BackColor="#FFCC66" ForeColor="#333333" HorizontalAlign="Center" />
+                    <SelectedRowStyle BackColor="#FFCC66" Font-Bold="True" ForeColor="Navy" />
+                    <HeaderStyle BackColor="#4b6c9e" Font-Bold="True" ForeColor="White" />
+                    <AlternatingRowStyle BackColor="White" />
+                </asp:GridView>
+            </fieldset>
         </div>
     </asp:Panel>
 
